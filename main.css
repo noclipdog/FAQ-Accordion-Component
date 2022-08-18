@@ -51,11 +51,12 @@ body{
     position: relative;
     background: white;
     width: 80vw;
+    min-width: 327px;
     padding-bottom: 17px;
     border-radius: 22px;
 }
 
-.faq-header{
+.mobile-header{
     position: absolute;
     top: -110px;
     left: auto;
@@ -67,12 +68,34 @@ body{
     top: -80px;
 }
 
+.desktop-header{
+    display: none;
+    position: absolute;
+    left: -90px;
+    z-index: 1;
+}
+
+.desktop-box{
+    position: absolute;
+    top: 135px;
+    left: -6px;
+}
+
+.desktop-image-shadow{
+    position: absolute;
+    width: 200%;
+    top: -350px;
+    right: 0;
+    z-index: -1;
+
+}
+
 .faq-contents{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 130px;
-    margin-bottom: 48px;
+    padding-top: 130px;
+    padding-bottom: 48px;
     width: 85%;
 }
 
@@ -134,4 +157,40 @@ body{
 
 .faq-panel.active{
     border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+@media screen and (min-width: 992px){
+    .faq-component{
+        width: 70vw;
+        min-width: 760px;
+        max-width: 920px;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    .mobile-header{
+        display: none;
+    }
+
+    .desktop-header{
+        display: block;
+    }
+
+    .faq-contents{
+        padding-right: 85px;
+        padding-top: 63px;
+        padding-bottom: 83px;
+        width: 47.5%;
+        align-items: right;
+    }
+
+    .faq-accordion{
+        font-size: 14px;
+    }
+
+    .faq-panel p{
+        width:90%;
+    }
+
 }
