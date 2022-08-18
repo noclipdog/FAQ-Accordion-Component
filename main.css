@@ -40,5 +40,98 @@ body{
     background: linear-gradient(var(--soft-violet),var(--soft-blue));
     font-family: var(--font-family);
     font-size: var(--body-copy); 
-    color: var(---very-dark-desaturated-blue);  
+    color: var(--dark-grayish-blue);  
+}
+
+/* FAQ COMPONENT */
+.faq-component{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: white;
+    width: 80vw;
+    padding-bottom: 17px;
+    border-radius: 22px;
+}
+
+.faq-header{
+    position: absolute;
+    top: -110px;
+    left: auto;
+    right: auto;
+}
+
+.mobile-image-shadow{
+    position: relative;
+    top: -80px;
+}
+
+.faq-contents{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 130px;
+    margin-bottom: 48px;
+    width: 85%;
+}
+
+.faq-contents h1{
+    font-size: 32px;
+    font-weight: var(--bold);
+    color: var(--very-dark-desaturated-blue);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.faq-accordion, .faq-panel{
+    display: flex;
+    background: none;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding-bottom: 17px;
+    width: 100%;
+}
+
+.faq-accordion{
+    border-bottom: 1px solid var(--light-grayish-blue);
+    padding-top: 17px;
+    font-size: 13px;
+    text-align: left;
+    color: var(--very-dark-grayish-blue);
+    cursor: pointer;
+}
+
+.faq-accordion img{
+    height: 8px;
+}
+
+.faq-accordion:hover{
+    color: var(--soft-red);
+}
+
+.faq-accordion.active{ /* Probando el modo activo */
+    border-bottom: none;
+    color: var(--very-dark-desaturated-blue);
+    font-weight: bold;
+}
+
+.faq-accordion.active img{
+    transform: rotate(180deg);
+}
+
+.faq-panel{
+    display: none;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.faq-panel p{
+    width:85%;
+}
+
+.faq-panel.active{
+    border-bottom: 1px solid var(--light-grayish-blue);
 }
