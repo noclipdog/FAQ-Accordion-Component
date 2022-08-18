@@ -51,6 +51,7 @@ body{
     position: relative;
     background: white;
     width: 80vw;
+    min-width: 327px;
     padding-bottom: 17px;
     border-radius: 22px;
 }
@@ -71,6 +72,7 @@ body{
     display: none;
     position: absolute;
     left: -90px;
+    z-index: 1;
 }
 
 .desktop-box{
@@ -84,6 +86,7 @@ body{
     width: 200%;
     top: -350px;
     right: 0;
+    z-index: -1;
 
 }
 
@@ -159,9 +162,11 @@ body{
 @media screen and (min-width: 992px){
     .faq-component{
         width: 70vw;
-        height: 60vh;
+        min-width: 760px;
+        max-width: 920px;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
+        padding-bottom: 0;
     }
 
     .mobile-header{
@@ -173,8 +178,19 @@ body{
     }
 
     .faq-contents{
-        padding-left: 400px;
-        padding-top: auto;
-        padding-bottom: auto;
+        padding-right: 85px;
+        padding-top: 63px;
+        padding-bottom: 83px;
+        width: 47.5%;
+        align-items: right;
     }
+
+    .faq-accordion{
+        font-size: 14px;
+    }
+
+    .faq-panel p{
+        width:90%;
+    }
+
 }
